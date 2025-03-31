@@ -1,0 +1,493 @@
+/* Сброс/нормализация стилей на ваше усмотрение */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  /* Контейнер для контента фиксированной ширины */
+  .container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+/* ---------- ШАПКА (HEADER) ---------- */
+.site-header {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    width: 1200px; /* Зависит от макета */
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Логотип */
+.logo img {
+    display: block;
+    max-height: 40px;
+}
+
+/* Главное меню */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.main-nav ul li a:hover {
+    color: #0854A0; 
+}
+
+/* Блок иконок (глаз, поиск, язык) */
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon img {
+    width: 24px;
+    height: 18px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.icon img:hover {
+    opacity: 0.7;
+}
+
+/* Переключатель языка */
+.lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+}
+
+.lang-switch a {
+    color: #333;
+    text-decoration: none;
+}
+
+.lang-switch a.active {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* Стрелка вниз */
+.lang-switch .arrow {
+    font-size: 12px;
+    transition: transform 0.3s;
+}
+
+/* Выпадающее меню языков */
+.lang-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: none;
+    flex-direction: column;
+    min-width: 80px;
+    padding: 5px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000; 
+}
+
+.lang-dropdown a {
+    padding: 5px 10px;
+    display: block;
+    color: #333;
+    font-size: 14px;
+}
+
+.lang-dropdown a:hover {
+    background: #f0f0f0;
+}
+
+.lang-switch:hover .lang-dropdown {
+    display: flex;
+}
+
+  
+/* ---------- ГЛАВНЫЙ БАННЕР (HERO) ---------- */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    background: #192A39 url('img/image 3.png') no-repeat right/cover;
+    padding: 80px 80px 60px; /* Отступы: сверху 80px, по бокам 80px, снизу 60px */
+    min-height: 620px;
+    position: relative;
+    color: white;
+  }
+  
+  .hero-content {
+    width: 45%;
+    position: relative;
+    z-index: 2;
+    padding: 40px 30px 0; /* Отступы: сверху 40px, по бокам 30px */
+  }
+  
+  .hero-content h1 {
+    font-size: 36px;
+    line-height: 1.3;
+    margin-bottom: 25px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+  
+  .hero-description {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 35px;
+    max-width: 480px;
+    opacity: 0.9;
+  }
+  
+  .hero-button {
+    display: inline-flex;
+    padding: 16px 32px;
+    background: #0854A0;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s;
+    margin-bottom: 45px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .hero-button:hover {
+    background: #0056b3;
+  }
+  
+  .stats {
+    display: flex;
+    gap: 50px;
+  }
+  
+  .stat-item {
+    text-align: left;
+  }
+  
+  .stat-value {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  
+  .stat-label {
+    font-size: 13px;
+    line-height: 1.4;
+    color: #D5E1EC;
+    opacity: 0.9;
+  }
+  
+  .hero-image {
+    width: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 40px 30px 0; 
+  }
+  
+  .premier-photo {
+    height: 100%; 
+    width: auto;
+    object-fit: cover;
+    object-position: right bottom;
+  }
+  
+/* ---------- ПОСЛЕДНИЕ НОВОСТИ ---------- */
+.latest-news {
+    padding: 60px 0;
+    background: #fff;
+  }
+  
+  .latest-news h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .news-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #ddd; 
+    
+  }
+
+  .news-item:last-child {
+    border-bottom: none; /* Убираем линию у последней новости */
+  } 
+
+  .news-item:hover {
+    background: #f9f9f9;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+  
+  /* Подсветка текста при наведении */
+  .news-item:hover h3,
+  .news-item:hover p {
+    color: #0854A0; /* Синий цвет при наведении */
+  }
+  
+  .news-image {
+    width: 246px;
+    height: 216px;
+    border-radius: 4px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  
+  .news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .news-date {
+    text-align: center;
+    flex-shrink: 0;
+    margin-right: 20px;
+  }
+  
+  .news-day {
+    font-size: 24px;
+    font-weight: 700;
+    display: block;
+    color: #222;
+  }
+  
+  .news-month-year {
+    font-size: 14px;
+    color: #666;
+    text-transform: lowercase;
+  }
+  
+.news-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1; /* Растягиваем контейнер на всю высоту */
+    min-height: 100%; /* Даем возможность занять всю доступную высоту */
+}
+  
+  .news-content h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    line-height: 1.3;
+    transition: color 0.3s ease; /* Плавное изменение цвета */
+  }
+  
+  .news-content p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 0;
+    transition: color 0.3s ease; /* Плавное изменение цвета */
+  }
+  
+  /* Центрирование кнопки "Все новости" */
+  .button-container {
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    margin-top: 30px;
+  }
+  
+  .more-news-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #0B5ED7; /* Синяя рамка */
+    color: #0B5ED7; /* Цвет текста */
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: transparent;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .more-news-btn:hover {
+    background: #0B5ED7; 
+    color: white;
+  }
+  
+/* ---------- БЛОК О КОМПАНИИ ---------- */
+.company-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0854A0;
+    color: #fff;
+    height: 700px; 
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  
+  .company-text {
+    width: 50%;
+    padding: 60px;
+  }
+  
+  .company-text h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .company-text p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+  }
+  
+  .company-text ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .company-text ul li {
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+  
+  .company-text ul li a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+  }
+  
+  .company-text ul li a:hover {
+    border-bottom: none;
+  }
+  
+  .info-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .info-button:hover {
+    background: #fff;
+    color: #0854A0;
+  }
+  
+  .company-img {
+    width: 50%;
+    height: 100%;
+  }
+  
+  .company-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  
+  /* ---------- ПОДВАЛ (FOOTER) ---------- */
+  .site-footer {
+    background: #f0f0f0;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #333;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  
+  .footer-top {
+    padding: 40px 0;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .footer-top-inner {
+    display: flex;
+    align-items: flex-start; /* Выровнять элементы сверху */
+    justify-content: space-between; /* Равномерное распределение */
+    gap: 60px; /* Увеличенный отступ между колонками */
+    flex-wrap: wrap; /* Для адаптации на маленьких экранах */
+  }
+
+  .footer-logo {
+    width: 170px; /* Фиксированная ширина */
+    height: 112px; /* Фиксированная высота */
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-logo img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .footer-col h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  .footer-col ul {
+    list-style: none;
+  }
+  
+  .footer-col ul li a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .footer-col ul li a:hover {
+    text-decoration: underline;
+  }
